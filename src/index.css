@@ -1,0 +1,399 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Modern Vibrant Design System */
+    --background: 220 15% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 15% 4%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 12% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 280 100% 65%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 220 12% 6%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 12% 6%;
+    --muted-foreground: 220 5% 64.9%;
+
+    --accent: 45 100% 60%;
+    --accent-foreground: 220 15% 4%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 8% 12%;
+    --input: 220 8% 12%;
+    --ring: 280 100% 65%;
+
+    /* Modern vibrant gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(280 100% 65%) 0%, hsl(45 100% 60%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(320 100% 70%) 0%, hsl(200 100% 60%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(220 12% 6% / 0.8) 0%, hsl(220 15% 4% / 0.4) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(280 100% 65% / 0.1) 0%, hsl(45 100% 60% / 0.1) 100%);
+    
+    /* Glass morphism effects */
+    --glass-bg: hsl(240 5% 6% / 0.6);
+    --glass-border: hsl(0 0% 100% / 0.1);
+    --glass-shadow: 0 8px 32px hsl(0 0% 0% / 0.37);
+    
+    /* Modern vibrant shadows */
+    --shadow-primary: 0 10px 40px hsl(280 100% 65% / 0.3);
+    --shadow-accent: 0 10px 40px hsl(45 100% 60% / 0.3);
+    --shadow-glass: 0 8px 32px hsl(0 0% 0% / 0.37);
+    --shadow-glow: 0 0 40px hsl(280 100% 65% / 0.4);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-black text-white font-sans;
+    background: linear-gradient(180deg, #000000 0%, #0a0a0a 50%, #000000 100%);
+    background-attachment: fixed;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+}
+
+@layer components {
+  /* OnePlus-style animations */
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* New attractive animations */
+  .animate-slide-in-left {
+    animation: slideInLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
+    }
+    to {
+      box-shadow: 0 0 30px rgba(220, 38, 38, 0.6);
+    }
+  }
+  
+  /* OnePlus-style smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* OnePlus-style glass card with unified motion */
+  .oneplus-card {
+    @apply backdrop-blur-xl border border-white/10 bg-black/20;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transform-style: preserve-3d;
+  }
+  
+  .oneplus-card:hover {
+    @apply border-red-500/30 bg-black/40;
+    transform: translateY(-12px) scale(1.03) !important;
+    box-shadow: 
+      0 30px 60px rgba(0, 0, 0, 0.3),
+      0 0 50px rgba(220, 38, 38, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  }
+  
+  /* OnePlus-style button */
+  .oneplus-btn {
+    @apply bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full font-light;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .oneplus-btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(220, 38, 38, 0.3);
+  }
+  
+  /* OnePlus-style section */
+  .oneplus-section {
+    @apply py-20 px-6;
+    background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+  }
+  
+  /* Enhanced Glass morphism card with 3D feel */
+  .glass-card {
+    @apply backdrop-blur-xl border;
+    background: var(--glass-bg);
+    border-color: var(--glass-border);
+    box-shadow: 
+      var(--glass-shadow),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      0 0 0 1px rgba(255, 255, 255, 0.05);
+    transform: translateZ(0);
+    transform-style: preserve-3d;
+  }
+  
+  /* Premium gradient button */
+  .btn-gradient {
+    background: var(--gradient-primary);
+    transition: var(--transition-smooth);
+    @apply shadow-lg;
+  }
+  
+  .btn-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-primary);
+  }
+  
+  /* Enhanced 3D Floating animation */
+  .float-animation {
+    animation: float3d 8s ease-in-out infinite;
+  }
+  
+  @keyframes float3d {
+    0%, 100% { 
+      transform: translateY(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg); 
+    }
+    25% { 
+      transform: translateY(-15px) rotateX(10deg) rotateY(45deg) rotateZ(5deg); 
+    }
+    50% { 
+      transform: translateY(-25px) rotateX(0deg) rotateY(90deg) rotateZ(0deg); 
+    }
+    75% { 
+      transform: translateY(-15px) rotateX(-10deg) rotateY(135deg) rotateZ(-5deg); 
+    }
+  }
+  
+  /* Fade in animation */
+  .fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Enhanced 3D Hover glow effect */
+  .hover-glow {
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    transform-style: preserve-3d;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 
+      var(--shadow-accent),
+      0 20px 40px rgba(0, 0, 0, 0.15),
+      0 0 80px rgba(var(--primary), 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateY(-8px) rotateX(5deg) scale(1.02);
+  }
+
+  /* Unified Card Motion Animation */
+  .card-motion {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+  }
+  
+  .card-motion:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+      0 25px 50px rgba(0, 0, 0, 0.25),
+      0 0 40px rgba(220, 38, 38, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  /* 3D Card effects */
+  .card-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+
+  .card-3d:hover {
+    transform: rotateY(10deg) rotateX(10deg) translateZ(20px);
+  }
+
+  /* 3D Button effects */
+  .btn-3d {
+    transform-style: preserve-3d;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+
+  .btn-3d:hover {
+    transform: translateY(-3px) rotateX(10deg);
+    box-shadow: 
+      0 10px 20px rgba(0, 0, 0, 0.2),
+      0 0 40px rgba(var(--primary), 0.4);
+  }
+
+  .btn-3d:active {
+    transform: translateY(-1px) rotateX(5deg);
+  }
+
+  /* Smooth scroll with perspective */
+  html {
+    scroll-behavior: smooth;
+    perspective: 1000px;
+  }
+}
