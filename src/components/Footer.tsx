@@ -44,13 +44,13 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <button 
-                onClick={() => window.open("https://wa.me/+919876543210", "_blank")}
+                onClick={() => window.open("https://wa.me/+919140613637", "_blank")}
                 className="w-12 h-12 bg-white/10 hover:bg-red-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
               >
                 <MessageCircle className="w-5 h-5 text-white" />
               </button>
               <button 
-                onClick={() => window.open("mailto:hello@oneplusdev.com", "_blank")}
+                onClick={() => window.open("mailto:Alimahparveen2420@gmail.com", "_blank")}
                 className="w-12 h-12 bg-white/10 hover:bg-red-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
               >
                 <Mail className="w-5 h-5 text-white" />
@@ -105,11 +105,11 @@ const Footer = () => {
             <div className="space-y-4">
               <div>
                 <p className="text-gray-500 text-sm font-light mb-1">WhatsApp</p>
-                <p className="text-red-400 font-light">+91 98765 43210</p>
+                <p className="text-red-400 font-light">+91 91406 13637</p>
               </div>
               <div>
                 <p className="text-gray-500 text-sm font-light mb-1">Email</p>
-                <p className="text-red-400 font-light">hello@oneplusdev.com</p>
+                <p className="text-red-400 font-light">Alimahparveen2420@gmail.com</p>
               </div>
               <div>
                 <p className="text-gray-500 text-sm font-light mb-1">Response</p>
