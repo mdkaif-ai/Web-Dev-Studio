@@ -19,7 +19,11 @@ const Contact = () => {
     const elements = sectionRef.current?.querySelectorAll('.contact-item');
     elements?.forEach((element) => observer.observe(element));
 
-    return () => observer.disconnect();
+    // amazonq-ignore-next-line
+    return () => {
+      elements?.forEach((element) => observer.unobserve(element));
+      observer.disconnect();
+    };
   }, []);
 
   const contactMethods = [

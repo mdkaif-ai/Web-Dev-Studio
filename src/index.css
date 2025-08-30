@@ -270,7 +270,7 @@ All colors MUST be HSL.
   
   /* OnePlus-style section */
   .oneplus-section {
-    @apply py-20 px-6;
+    @apply py-12 sm:py-16 md:py-20 px-4 sm:px-6;
     background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
   }
   

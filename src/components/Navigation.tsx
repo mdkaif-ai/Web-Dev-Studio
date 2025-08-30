@@ -67,8 +67,8 @@ const Navigation = () => {
               </div>
             </div>
             <div className="text-2xl font-light text-white tracking-wide">
-              <span className="font-bold bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">Alimah</span>
-              <div className="text-red-500 text-sm font-semibold tracking-wider uppercase opacity-90">Showcase</div>
+              <span className="font-bold bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">Web Dev</span>
+              <div className="text-red-500 text-sm font-semibold tracking-wider uppercase opacity-90">Studio</div>
             </div>
           </div>
 
@@ -109,7 +109,8 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         <div className={`md:hidden overflow-hidden transition-all duration-500 ${isOpen ? 'max-h-96 mt-4' : 'max-h-0'}`}>
-          <div className="flex flex-col space-y-4 pb-4">
+          <div className="absolute inset-0 bg-black/80 backdrop-blur-sm -z-10 rounded-2xl"></div>
+          <div className="flex flex-col space-y-4 pb-4 relative z-10 bg-black/90 backdrop-blur-xl rounded-2xl p-4 border border-white/10">
             {navItems.map((item, index) => (
               <button
                 key={item.name}

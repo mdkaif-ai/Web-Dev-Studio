@@ -70,9 +70,9 @@ const Services = () => {
         
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <div 
-              key={index} 
+              key={service.title} 
               className="service-card oneplus-card p-8 rounded-2xl group opacity-0"
               style={{ animationDelay: service.delay }}
             >
@@ -113,7 +113,7 @@ const Services = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="oneplus-card p-8 rounded-2xl text-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+        <div className="oneplus-card p-4 sm:p-8 rounded-2xl text-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
           <h3 className="text-2xl font-light text-white mb-4">
             Ready to Transform Your Business?
           </h3>
@@ -122,9 +122,10 @@ const Services = () => {
           </p>
           <Button 
             onClick={handleContactClick}
-            className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105"
+            className="bg-red-600 hover:bg-red-700 text-white px-4 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium transition-all duration-300 hover:scale-105 w-full sm:w-auto max-w-xs sm:max-w-none mx-auto"
           >
-            Start Your Project Today
+            <span className="block sm:hidden">Start Project</span>
+            <span className="hidden sm:block">Start Your Project Today</span>
           </Button>
         </div>
       </div>

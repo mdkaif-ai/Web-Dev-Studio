@@ -77,9 +77,9 @@ const Portfolio = () => {
         
         {/* Projects Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <div 
-              key={index} 
+              key={project.title} 
               className="portfolio-card oneplus-card rounded-3xl overflow-hidden group opacity-0"
               style={{ animationDelay: project.delay }}
             >

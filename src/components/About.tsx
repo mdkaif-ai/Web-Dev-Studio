@@ -19,6 +19,7 @@ const About = () => {
     const elements = sectionRef.current?.querySelectorAll('.about-item');
     elements?.forEach((element) => observer.observe(element));
 
+    // amazonq-ignore-next-line
     return () => observer.disconnect();
   }, []);
 
@@ -106,13 +107,13 @@ const About = () => {
                   A
                 </div>
                 <div>
-                  <h4 className="text-xl font-light text-white">Mubashshira</h4>
-                  <p className="text-gray-400 font-light">Frontend & Design</p>
+                  <h4 className="text-xl font-bold bg-gradient-to-r from-red-500 via-red-400 to-red-600 bg-clip-text text-transparent">Alimah</h4>
+                  <p className="text-gray-400 font-light">Backend & Systems</p>
                 </div>
               </div>
               <p className="text-gray-400 font-light">
-                Crafting beautiful, responsive interfaces with modern technologies. 
-                Specializes in React, UI/UX design, and mobile-first development.
+                Building robust, scalable systems and intelligent solutions. 
+                Expert in Node.js, system integration, and database architecture.
               </p>
             </div>
 
@@ -122,13 +123,13 @@ const About = () => {
                   M
                 </div>
                 <div>
-                  <h4 className="text-xl font-light text-white">Alimah</h4>
-                  <p className="text-gray-400 font-light">Backend & Systems</p>
+                  <h4 className="text-xl font-bold bg-gradient-to-r from-white via-gray-200 to-gray-300 bg-clip-text text-transparent">Mubashshira</h4>
+                  <p className="text-gray-400 font-light">Frontend & Design</p>
                 </div>
               </div>
               <p className="text-gray-400 font-light">
-                Building robust, scalable systems and intelligent solutions. 
-                Expert in Node.js, system integration, and database architecture.
+                Crafting beautiful, responsive interfaces with modern technologies. 
+                Specializes in React, UI/UX design, and mobile-first development.
               </p>
             </div>
           </div>

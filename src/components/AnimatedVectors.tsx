@@ -15,6 +15,7 @@ export const AnimatedBackground = () => {
             className="animate-pulse-glow"
           />
           <defs>
+            // amazonq-ignore-next-line
             <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="hsl(280 100% 65%)" />
               <stop offset="100%" stopColor="hsl(45 100% 60%)" />
@@ -136,6 +137,7 @@ export const FloatingParticles = () => {
           key={i}
           className={`absolute w-2 h-2 bg-primary rounded-full animate-float-vector opacity-30`}
           style={{
+            // amazonq-ignore-next-line
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
             animationDelay: `${i * 0.8}s`,

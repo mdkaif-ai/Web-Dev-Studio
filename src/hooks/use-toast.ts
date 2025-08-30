@@ -56,7 +56,8 @@ interface State {
 const toastTimeouts = new Map<string, ReturnType<typeof setTimeout>>()
 
 const addToRemoveQueue = (toastId: string) => {
-  if (toastTimeouts.has(toastId)) {
+  // Validate toastId to prevent injection
+  if (!toastId || typeof toastId !== 'string' || toastTimeouts.has(toastId)) {
     return
   }
 
@@ -92,7 +93,7 @@ export const reducer = (state: State, action: Action): State => {
 
       // ! Side effects ! - This could be extracted into a dismissToast() action,
       // but I'll keep it here for simplicity
-      if (toastId) {
+      if (toastId && typeof toastId === 'string') {
         addToRemoveQueue(toastId)
       } else {
         state.toasts.forEach((toast) => {
@@ -179,7 +180,7 @@ function useToast() {
         listeners.splice(index, 1)
       }
     }
-  }, [state])
+  }, [])
 
   return {
     ...state,

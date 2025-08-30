@@ -130,9 +130,9 @@ const Pricing = () => {
 
         {/* Pricing Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-          {plans.map((plan, index) => (
+          {plans.map((plan) => (
             <div 
-              key={index}
+              key={plan.name}
               className={`pricing-card oneplus-card rounded-2xl p-8 relative overflow-hidden opacity-0 ${
                 plan.popular ? 'ring-2 ring-red-500/50 scale-105' : ''
               }`}
@@ -189,16 +189,18 @@ const Pricing = () => {
               {selectedPlan === plan.name ? (
                 <Button 
                   onClick={() => handleContactClick(plan.name)}
-                  className="w-full text-lg py-3 h-auto font-light transition-all duration-300 hover:scale-105 bg-red-600 hover:bg-red-700 text-white shadow-lg hover:shadow-red-600/25"
+                  className="w-full text-sm sm:text-lg py-3 h-auto font-light transition-all duration-300 hover:scale-105 bg-red-600 hover:bg-red-700 text-white shadow-lg hover:shadow-red-600/25"
                 >
-                  Get Started Now
+                  <span className="block sm:hidden">Get Started</span>
+                  <span className="hidden sm:block">Get Started Now</span>
                 </Button>
               ) : (
                 <Button 
                   onClick={() => setSelectedPlan(plan.name)}
-                  className="w-full text-lg py-3 h-auto font-light transition-all duration-300 hover:scale-105 border border-white/20 text-white hover:bg-red-600 hover:border-red-600 bg-transparent hover:shadow-lg"
+                  className="w-full text-sm sm:text-lg py-3 h-auto font-light transition-all duration-300 hover:scale-105 border border-white/20 text-white hover:bg-red-600 hover:border-red-600 bg-transparent hover:shadow-lg"
                 >
-                  Choose This Plan
+                  <span className="block sm:hidden">Choose Plan</span>
+                  <span className="hidden sm:block">Choose This Plan</span>
                 </Button>
               )}
             </div>

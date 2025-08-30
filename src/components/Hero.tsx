@@ -8,8 +8,17 @@ const Hero = () => {
   const [showContactModal, setShowContactModal] = useState(false);
   
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          setScrollY(window.scrollY);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -56,59 +65,59 @@ const Hero = () => {
       </div>
       
       {/* Main content */}
-      <div className="relative z-10 container mx-auto px-6 text-center">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center">
         <div className="max-w-6xl mx-auto">
           {/* Enhanced badge with glow */}
-          <div className="inline-flex items-center gap-2 border border-red-500/30 px-4 py-2 rounded-full text-sm mb-8 backdrop-blur-sm bg-black/20 animate-fade-in animate-glow">
-            <Sparkles className="w-4 h-4 text-red-500 animate-pulse" />
+          <div className="inline-flex items-center gap-2 border border-red-500/30 px-3 py-2 rounded-full text-xs sm:text-sm mb-6 sm:mb-8 backdrop-blur-sm bg-black/20 animate-fade-in animate-glow">
+            <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-red-500 animate-pulse" />
             <span className="text-gray-300 font-light tracking-wide">Premium Web & Tools Development</span>
           </div>
           
           {/* Main heading */}
-          <h1 className="text-5xl md:text-7xl font-light text-white leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-white leading-tight mb-4 sm:mb-6 animate-fade-in-up px-2" style={{ animationDelay: '0.2s' }}>
             Transform Ideas Into
             <br />
             <span className="text-red-500 font-normal">Digital Excellence</span>
           </h1>
           
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-12 font-light animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            We're <span className="text-red-500 font-semibold">Alimah & Mubashshira</span> – Your trusted partners for stunning websites, powerful tools, SEO optimization, and automation solutions that drive real results.
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-12 font-light animate-fade-in-up px-4" style={{ animationDelay: '0.4s' }}>
+            We're <span className="text-white font-semibold">Alimah</span> & <span className="text-red-500 font-semibold">Mubashshira</span> – Your trusted partners for stunning websites, powerful tools, SEO optimization, and automation solutions that drive real results.
           </p>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-20 animate-fade-in-up px-4" style={{ animationDelay: '0.6s' }}>
             <Button 
               onClick={handleContactClick}
-              className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-600/25 border-0"
+              className="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-600/25 border-0"
             >
-              <Code className="w-5 h-5 mr-2" />
+              <Code className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               Start Your Project
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
             </Button>
             
             <Button 
               variant="outline"
               onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
-              className="border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-full text-lg font-light backdrop-blur-sm transition-all duration-300 hover:scale-105"
+              className="w-full sm:w-auto border-white/20 text-white hover:bg-white/10 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-light backdrop-blur-sm transition-all duration-300 hover:scale-105"
             >
               View Our Work
             </Button>
           </div>
           
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-            <div className="oneplus-card p-6 rounded-xl text-center animate-float" style={{ animationDelay: '0s' }}>
-              <div className="text-4xl font-light text-red-500 mb-2 animate-glow">50+</div>
-              <div className="text-gray-400 font-light">Projects Delivered</div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 max-w-4xl mx-auto animate-fade-in-up px-4" style={{ animationDelay: '0.8s' }}>
+            <div className="oneplus-card p-4 sm:p-6 rounded-xl text-center animate-float" style={{ animationDelay: '0s' }}>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-light text-red-500 mb-2 animate-glow">50+</div>
+              <div className="text-gray-400 font-light text-sm sm:text-base">Projects Delivered</div>
             </div>
-            <div className="oneplus-card p-6 rounded-xl text-center animate-float" style={{ animationDelay: '2s' }}>
-              <div className="text-4xl font-light text-white mb-2">100%</div>
-              <div className="text-gray-400 font-light">Client Satisfaction</div>
+            <div className="oneplus-card p-4 sm:p-6 rounded-xl text-center animate-float" style={{ animationDelay: '2s' }}>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-light text-white mb-2">100%</div>
+              <div className="text-gray-400 font-light text-sm sm:text-base">Client Satisfaction</div>
             </div>
-            <div className="oneplus-card p-6 rounded-xl text-center animate-float" style={{ animationDelay: '4s' }}>
-              <div className="text-4xl font-light text-red-500 mb-2 animate-glow">1 Year</div>
-              <div className="text-gray-400 font-light">Free Updates</div>
+            <div className="oneplus-card p-4 sm:p-6 rounded-xl text-center animate-float" style={{ animationDelay: '4s' }}>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-light text-red-500 mb-2 animate-glow">1 Year</div>
+              <div className="text-gray-400 font-light text-sm sm:text-base">Free Updates</div>
             </div>
           </div>
         </div>
