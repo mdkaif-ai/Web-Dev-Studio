@@ -73,7 +73,7 @@ const About = () => {
             
             <div className="space-y-6 text-gray-400 font-light leading-relaxed">
               <p>
-                We are Alimah & Mubashshira - two passionate developers who believe 
+                We are passionate developers who believe 
                 in the power of exceptional digital experiences.
               </p>
               

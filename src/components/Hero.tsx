@@ -82,7 +82,7 @@ const Hero = () => {
           
           {/* Subheading */}
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-12 font-light animate-fade-in-up px-4" style={{ animationDelay: '0.4s' }}>
-            We're <span className="text-white font-semibold">Alimah</span> & <span className="text-red-500 font-semibold">Mubashshira</span> – Your trusted partners for stunning websites, powerful tools, SEO optimization, and automation solutions that drive real results.
+            We're <span className="text-white font-bold">Alimah</span> & <span className="text-white font-bold">Mubashira</span> – Your trusted partners for stunning websites, powerful tools, SEO optimization, and automation solutions that drive real results.
           </p>
           
           {/* CTA Buttons */}

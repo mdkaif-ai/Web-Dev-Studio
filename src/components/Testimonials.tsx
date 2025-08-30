@@ -93,7 +93,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial) => (
             <div 
               key={testimonial.name}
-              className="testimonial-card oneplus-card p-6 rounded-2xl relative opacity-0"
+              className="testimonial-card oneplus-card p-6 rounded-2xl relative animate-fade-in-up"
               style={{ animationDelay: testimonial.delay }}
             >
               {/* Quote Icon */}
