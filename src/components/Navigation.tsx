@@ -86,12 +86,7 @@ const Navigation = () => {
                 <span className="absolute inset-0 bg-red-500/10 rounded-lg scale-0 transition-transform duration-300 group-hover:scale-100 -z-10"></span>
               </button>
             ))}
-            <Button 
-              onClick={handleContactClick}
-              className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-8 py-3 rounded-full text-sm font-medium transition-all duration-500 hover:scale-110 hover:shadow-lg hover:shadow-red-500/30 ml-6 border-0"
-            >
-              Get Started
-            </Button>
+
           </div>
 
           {/* Mobile menu button */}
@@ -121,12 +116,7 @@ const Navigation = () => {
                 {item.name}
               </button>
             ))}
-            <Button 
-              onClick={handleContactClick}
-              className="bg-red-600 hover:bg-red-700 text-white mt-4 w-full rounded-full font-light"
-            >
-              Get Started
-            </Button>
+
           </div>
         </div>
       </div>
