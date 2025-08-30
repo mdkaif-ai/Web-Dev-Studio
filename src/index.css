@@ -125,7 +125,7 @@ All colors MUST be HSL.
     @apply bg-black text-white font-sans;
     background: linear-gradient(180deg, #000000 0%, #0a0a0a 50%, #000000 100%);
     background-attachment: fixed;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Poppins', 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
 }
 
@@ -228,11 +228,27 @@ All colors MUST be HSL.
   }
   
   @keyframes glow {
-    from {
-      box-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(220, 38, 38, 0.2);
     }
-    to {
-      box-shadow: 0 0 30px rgba(220, 38, 38, 0.6);
+    50% {
+      box-shadow: 0 0 30px rgba(220, 38, 38, 0.4);
+    }
+  }
+  
+  /* Smooth pulse animation */
+  .animate-pulse-smooth {
+    animation: pulse-smooth 4s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-smooth {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.9;
+      transform: scale(1.02);
     }
   }
   
@@ -241,20 +257,21 @@ All colors MUST be HSL.
     scroll-behavior: smooth;
   }
   
-  /* OnePlus-style glass card with unified motion */
+  /* Ultra-smooth glass card */
   .oneplus-card {
     @apply backdrop-blur-xl border border-white/10 bg-black/20;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1) !important;
     transform-style: preserve-3d;
+    will-change: transform, box-shadow, background;
   }
   
   .oneplus-card:hover {
-    @apply border-red-500/30 bg-black/40;
-    transform: translateY(-12px) scale(1.03) !important;
+    @apply border-red-500/25 bg-black/30;
+    transform: translateY(-6px) scale(1.015) !important;
     box-shadow: 
-      0 30px 60px rgba(0, 0, 0, 0.3),
-      0 0 50px rgba(220, 38, 38, 0.2),
-      inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+      0 20px 40px rgba(0, 0, 0, 0.15),
+      0 0 30px rgba(220, 38, 38, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
   }
   
   /* OnePlus-style button */
@@ -350,18 +367,19 @@ All colors MUST be HSL.
     transform: translateY(-8px) rotateX(5deg) scale(1.02);
   }
 
-  /* Unified Card Motion Animation */
+  /* Buttery smooth card motion */
   .card-motion {
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
     transform-style: preserve-3d;
+    will-change: transform, box-shadow;
   }
   
   .card-motion:hover {
-    transform: translateY(-8px) scale(1.02);
+    transform: translateY(-4px) scale(1.01);
     box-shadow: 
-      0 25px 50px rgba(0, 0, 0, 0.25),
-      0 0 40px rgba(220, 38, 38, 0.15),
-      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      0 15px 30px rgba(0, 0, 0, 0.12),
+      0 0 25px rgba(220, 38, 38, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
   }
 
   /* 3D Card effects */
