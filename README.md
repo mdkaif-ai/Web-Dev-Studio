@@ -1,73 +1,71 @@
-# Welcome to your Lovable project
+# Web Dev Studio
 
-## Project info
+A premium web development studio website built with modern technologies.
 
-**URL**: https://lovable.dev/projects/d40c7220-ebbb-4629-a006-8d98c930afa6
+## About
 
-## How can I edit this code?
+Web Dev Studio is a professional web development service offering:
+- Custom website development
+- Tools development
+- SEO optimization
+- Multi-language support (9 languages)
+- Responsive design
 
-There are several ways of editing your application.
+## Technologies Used
 
-**Use Lovable**
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Build Tool**: Vite
+- **UI Components**: shadcn-ui
+- **Routing**: React Router
+- **Internationalization**: Custom language context
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d40c7220-ebbb-4629-a006-8d98c930afa6) and start prompting.
+## Features
 
-Changes made via Lovable will be committed automatically to this repo.
+- 🌍 Multi-language support (English, Hindi, Arabic, Russian, Chinese, Spanish, French, German, Japanese)
+- 📱 Fully responsive design
+- ⚡ Fast loading with modern optimization
+- 🎨 Modern UI with smooth animations
+- 📧 Contact integration (WhatsApp, Email)
+- 🔍 SEO optimized
 
-**Use your preferred IDE**
+## Development
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Installation
 
-Follow these steps:
+```bash
+# Clone the repository
+git clone <your-repo-url>
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Navigate to project directory
+cd web_dev_studio
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Install dependencies
+npm install
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Build for Production
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+# Build the project
+npm run build
 
-**Use GitHub Codespaces**
+# Preview the build
+npm run preview
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Contact
 
-## What technologies are used for this project?
+- **WhatsApp**: +91 91406 13637
+- **Email**: Alimahparveen2420@gmail.com
+- **Response Time**: Within 2 hours
 
-This project is built with:
+## License
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/d40c7220-ebbb-4629-a006-8d98c930afa6) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Built by Alimah & Mubashira - Web Dev Studio

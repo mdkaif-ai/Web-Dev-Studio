@@ -123,7 +123,7 @@ const About = () => {
                   M
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold bg-gradient-to-r from-white via-gray-200 to-gray-300 bg-clip-text text-transparent">Mubashshira</h4>
+                  <h4 className="text-xl font-bold bg-gradient-to-r from-white via-gray-200 to-gray-300 bg-clip-text text-transparent">Mubashira</h4>
                   <p className="text-gray-400 font-light">Frontend & Design</p>
                 </div>
               </div>
