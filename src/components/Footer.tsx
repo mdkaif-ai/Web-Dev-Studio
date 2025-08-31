@@ -121,18 +121,18 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="border-t border-white/10 pt-8 mt-12">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex items-center space-x-2 text-gray-400 font-light">
+          <div className="flex flex-col space-y-4 text-center">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center space-y-2 sm:space-y-0 sm:space-x-2 text-gray-400 font-light">
               <span>© {currentYear} Web Dev Studio. Made with</span>
-              <Heart className="w-4 h-4 text-red-500 fill-current" />
+              <Heart className="w-4 h-4 text-red-500 fill-current mx-auto sm:mx-0" />
               <span>in India</span>
             </div>
-            <div className="flex items-center space-x-6 text-sm text-gray-500 font-light">
-              <span>+91 91406 13637</span>
-              <span>•</span>
-              <span>Alimahparveen2420@gmail.com</span>
-              <span>•</span>
-              <span>2hrs Response Time</span>
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center space-y-2 sm:space-y-0 sm:space-x-4 text-sm text-gray-500 font-light">
+              <span className="whitespace-nowrap">+91 91406 13637</span>
+              <span className="hidden sm:inline">•</span>
+              <span className="break-all sm:break-normal">Alimahparveen2420@gmail.com</span>
+              <span className="hidden sm:inline">•</span>
+              <span className="whitespace-nowrap">2hrs Response Time</span>
             </div>
           </div>
         </div>

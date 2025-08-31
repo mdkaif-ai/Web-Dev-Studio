@@ -68,4 +68,4 @@ npm run preview
 
 ## License
 
-Built by Alimah & Mubashira - Web Dev Studio
+Built by Alimah  - Web Dev Studio
