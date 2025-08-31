@@ -59,34 +59,34 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           {/* Left Side - Contact Methods */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             {contactMethods.map((method, index) => (
               <div 
                 key={index}
-                className="contact-item oneplus-card p-8 rounded-2xl cursor-pointer group opacity-0"
+                className="contact-item oneplus-card p-4 sm:p-6 lg:p-8 rounded-2xl cursor-pointer group opacity-0"
                 onClick={method.action}
                 style={{ animationDelay: method.delay }}
               >
-                <div className="flex items-center space-x-6">
-                  <div className="w-16 h-16 bg-red-600/10 rounded-2xl flex items-center justify-center group-hover:bg-red-600/20 transition-all duration-300">
-                    <method.icon className="w-8 h-8 text-red-500 group-hover:scale-110 transition-transform duration-300" />
+                <div className="flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-red-600/10 rounded-2xl flex items-center justify-center group-hover:bg-red-600/20 transition-all duration-300 mx-auto sm:mx-0">
+                    <method.icon className="w-6 h-6 sm:w-8 sm:h-8 text-red-500 group-hover:scale-110 transition-transform duration-300" />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-light text-white mb-2 group-hover:text-red-500 transition-colors duration-300">
+                  <div className="flex-1 text-center sm:text-left">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-light text-white mb-2 group-hover:text-red-500 transition-colors duration-300">
                       {method.title}
                     </h3>
-                    <p className="text-gray-400 font-light mb-1">{method.description}</p>
-                    <p className="text-red-400 font-light">{method.value}</p>
+                    <p className="text-sm sm:text-base text-gray-400 font-light mb-1">{method.description}</p>
+                    <p className="text-sm sm:text-base text-red-400 font-light break-all sm:break-normal">{method.value}</p>
                   </div>
-                  <ArrowRight className="w-6 h-6 text-gray-400 group-hover:text-red-500 group-hover:translate-x-2 transition-all duration-300" />
+                  <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-400 group-hover:text-red-500 group-hover:translate-x-2 transition-all duration-300 mx-auto sm:mx-0" />
                 </div>
               </div>
             ))}
 
             {/* Quick Contact CTA */}
-            <div className="contact-item oneplus-card p-8 rounded-2xl text-center opacity-0" style={{ animationDelay: '0.3s' }}>
+            <div className="contact-item oneplus-card p-4 sm:p-6 lg:p-8 rounded-2xl text-center opacity-0" style={{ animationDelay: '0.3s' }}>
               <h3 className="text-2xl font-light text-white mb-4">
                 Ready to Start?
               </h3>
