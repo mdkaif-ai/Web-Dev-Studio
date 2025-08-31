@@ -33,7 +33,7 @@ const Index = () => {
             
             {/* Client Websites Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
-              <div className="oneplus-card rounded-2xl overflow-hidden group animate-fade-in-up animate-float" style={{animationDelay: '0.1s'}}>
+              <div className="oneplus-card rounded-2xl overflow-hidden group card-enter animate-float" style={{animationDelay: '0.1s'}}>
                 <div className="h-48 bg-gradient-to-br from-red-600/20 to-black flex items-center justify-center">
                   <div className="text-6xl">📚</div>
                 </div>
@@ -58,7 +58,7 @@ const Index = () => {
                 </div>
               </div>
               
-              <div className="oneplus-card rounded-2xl overflow-hidden group animate-fade-in-up animate-float" style={{animationDelay: '0.2s'}}>
+              <div className="oneplus-card rounded-2xl overflow-hidden group card-enter animate-float" style={{animationDelay: '0.2s'}}>
                 <div className="h-48 bg-gradient-to-br from-blue-600/20 to-black flex items-center justify-center">
                   <div className="text-6xl">🖼️</div>
                 </div>
@@ -85,7 +85,7 @@ const Index = () => {
             </div>
             
             {/* Bottom CTA */}
-            <div className="oneplus-card p-8 rounded-2xl text-center animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+            <div className="oneplus-card p-8 rounded-2xl text-center card-enter animate-float" style={{animationDelay: '0.3s'}}>
               <h3 className="text-2xl font-light text-white mb-4">
                 Want Your Website Here?
               </h3>
