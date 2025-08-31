@@ -40,7 +40,7 @@ const About = () => {
             <span className="text-red-500 font-normal"> Founders</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
-            We're a dynamic duo of passionate developers dedicated to transforming your digital dreams into reality. 
+            We're a passionate team of developers dedicated to transforming your digital dreams into reality. 
             Our combined expertise spans the entire development spectrum.
           </p>
         </div>
@@ -73,7 +73,7 @@ const About = () => {
             
             <div className="space-y-6 text-gray-400 font-light leading-relaxed">
               <p>
-                We are passionate developers who believe 
+                We are a passionate team of developers who believe 
                 in the power of exceptional digital experiences.
               </p>
               
