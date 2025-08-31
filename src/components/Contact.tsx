@@ -94,7 +94,7 @@ const Contact = () => {
                 Let's discuss your project and bring your vision to life.
               </p>
               <button 
-                onClick={() => window.open("https://wa.me/+919140613637?text=Hi! I want to start a new project.", "_blank")}
+                onClick={() => window.open("https://web-dev-studio.netlify.app/contact", "_blank")}
                 className="oneplus-btn"
               >
                 Start Project

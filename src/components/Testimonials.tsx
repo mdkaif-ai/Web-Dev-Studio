@@ -182,7 +182,7 @@ const Testimonials = () => {
             ></textarea>
             <div className="text-center">
               <button 
-                onClick={() => window.open("https://wa.me/+919140613637?text=Hi! I want to submit a review for your services.", "_blank")}
+                onClick={() => window.open("https://web-dev-studio.netlify.app/contact", "_blank")}
                 className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-light transition-all duration-300 hover:scale-105"
               >
                 Submit Review

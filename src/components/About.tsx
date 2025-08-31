@@ -91,7 +91,7 @@ const About = () => {
 
             <div className="mt-8">
               <button 
-                onClick={() => window.open("https://wa.me/+919876543210?text=Hi! I'd like to work with your team.", "_blank")}
+                onClick={() => window.open("https://web-dev-studio.netlify.app/contact", "_blank")}
                 className="oneplus-btn"
               >
                 Work With Us
