@@ -32,8 +32,8 @@ const Index = () => {
             </div>
             
             {/* Client Websites Grid */}
-            <div className="flex justify-center mb-16">
-              <div className="oneplus-card rounded-2xl overflow-hidden group animate-fade-in-up max-w-md" style={{animationDelay: '0.1s'}}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
+              <div className="oneplus-card rounded-2xl overflow-hidden group animate-fade-in-up animate-float" style={{animationDelay: '0.1s'}}>
                 <div className="h-48 bg-gradient-to-br from-red-600/20 to-black flex items-center justify-center">
                   <div className="text-6xl">📚</div>
                 </div>
@@ -50,6 +50,31 @@ const Index = () => {
                     </span>
                     <button 
                       onClick={() => window.open("https://mangahaven4u.netlify.app/", "_blank")}
+                      className="text-red-500 hover:text-white text-sm font-light transition-colors duration-300"
+                    >
+                      View Live →
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="oneplus-card rounded-2xl overflow-hidden group animate-fade-in-up animate-float" style={{animationDelay: '0.2s'}}>
+                <div className="h-48 bg-gradient-to-br from-blue-600/20 to-black flex items-center justify-center">
+                  <div className="text-6xl">🖼️</div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-light text-white mb-2 group-hover:text-red-500 transition-colors duration-300">
+                    Image Extractor
+                  </h3>
+                  <p className="text-gray-400 text-sm mb-4 font-light">
+                    Advanced tool to extract images from documents and web pages with ease
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs bg-red-600/10 text-red-400 px-3 py-1 rounded-full border border-red-600/20">
+                      Utility Tool
+                    </span>
+                    <button 
+                      onClick={() => window.open("https://imgextract.netlify.app/", "_blank")}
                       className="text-red-500 hover:text-white text-sm font-light transition-colors duration-300"
                     >
                       View Live →
