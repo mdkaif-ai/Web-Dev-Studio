@@ -129,19 +129,19 @@ const Pricing = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
           {plans.map((plan) => (
             <div 
               key={plan.name}
-              className={`pricing-card oneplus-card rounded-2xl p-8 relative overflow-hidden opacity-0 ${
-                plan.popular ? 'ring-2 ring-red-500/50 scale-105' : ''
+              className={`pricing-card oneplus-card rounded-2xl p-4 sm:p-6 lg:p-8 relative overflow-visible opacity-0 ${
+                plan.popular ? 'ring-2 ring-red-500/50 lg:scale-105' : ''
               }`}
               style={{ animationDelay: plan.delay }}
             >
               {/* Popular Badge */}
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-red-600 text-white px-6 py-2 rounded-full text-sm font-light">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+                  <div className="bg-red-600 text-white px-4 sm:px-6 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-light shadow-lg whitespace-nowrap">
                     Most Popular
                   </div>
                 </div>
@@ -153,34 +153,34 @@ const Pricing = () => {
               </div>
 
               {/* Plan Name */}
-              <h3 className="text-2xl font-light text-white mb-2">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-light text-white mb-2 mt-2">
                 {plan.name}
               </h3>
 
               {/* Price */}
               <div className="mb-4">
-                <div className="flex items-baseline space-x-2">
-                  <span className="text-4xl font-light text-red-500">{plan.price}</span>
-                  <span className="text-gray-400 font-light">{plan.period}</span>
+                <div className="flex flex-col sm:flex-row sm:items-baseline sm:space-x-2">
+                  <span className="text-2xl sm:text-3xl lg:text-4xl font-light text-red-500">{plan.price}</span>
+                  <span className="text-sm sm:text-base text-gray-400 font-light">{plan.period}</span>
                 </div>
                 <div className="mt-2 p-2 bg-red-600/10 rounded-lg border border-red-600/20">
-                  <p className="text-sm text-red-400 font-light text-center">
+                  <p className="text-xs sm:text-sm text-red-400 font-light text-center">
                     💬 Price negotiable & discussed based on your requirements
                   </p>
                 </div>
               </div>
 
               {/* Description */}
-              <p className="text-gray-400 mb-6 leading-relaxed font-light">
+              <p className="text-sm sm:text-base text-gray-400 mb-4 sm:mb-6 leading-relaxed font-light">
                 {plan.description}
               </p>
 
               {/* Features */}
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                 {plan.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center space-x-3">
-                    <Check className="w-4 h-4 text-red-500 flex-shrink-0" />
-                    <span className="text-sm text-gray-400 font-light">{feature}</span>
+                  <li key={featureIndex} className="flex items-start space-x-2 sm:space-x-3">
+                    <Check className="w-3 h-3 sm:w-4 sm:h-4 text-red-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-xs sm:text-sm text-gray-400 font-light leading-relaxed">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -191,16 +191,16 @@ const Pricing = () => {
                   onClick={() => handleContactClick(plan.name)}
                   className="w-full text-sm sm:text-lg py-3 h-auto font-light transition-all duration-300 hover:scale-105 bg-red-600 hover:bg-red-700 text-white shadow-lg hover:shadow-red-600/25"
                 >
-                  <span className="block sm:hidden">Get Started</span>
-                  <span className="hidden sm:block">Get Started Now</span>
+                  <span className="block lg:hidden">Get Started</span>
+                  <span className="hidden lg:block">Get Started Now</span>
                 </Button>
               ) : (
                 <Button 
                   onClick={() => setSelectedPlan(plan.name)}
                   className="w-full text-sm sm:text-lg py-3 h-auto font-light transition-all duration-300 hover:scale-105 border border-white/20 text-white hover:bg-red-600 hover:border-red-600 bg-transparent hover:shadow-lg"
                 >
-                  <span className="block sm:hidden">Choose Plan</span>
-                  <span className="hidden sm:block">Choose This Plan</span>
+                  <span className="block lg:hidden">Choose Plan</span>
+                  <span className="hidden lg:block">Choose This Plan</span>
                 </Button>
               )}
             </div>
@@ -208,7 +208,7 @@ const Pricing = () => {
         </div>
 
         {/* Bottom Info */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
           <div className="oneplus-card p-6 rounded-xl text-center">
             <div className="w-12 h-12 bg-red-600/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <Star className="w-6 h-6 text-red-500" />

@@ -91,7 +91,7 @@ const About = () => {
 
             <div className="mt-8">
               <button 
-                onClick={() => window.open("https://web-dev-studio.netlify.app/contact", "_blank")}
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                 className="oneplus-btn"
               >
                 Work With Us

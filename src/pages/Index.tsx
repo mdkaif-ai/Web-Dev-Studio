@@ -68,7 +68,7 @@ const Index = () => {
                 Join our satisfied clients and get a professional website that drives results.
               </p>
               <button 
-                onClick={() => window.location.href = '/contact'}
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full text-lg font-light transition-all duration-300 hover:scale-105"
               >
                 Start Your Website
